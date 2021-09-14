@@ -3,12 +3,16 @@
 $Primary:#22C59E;
 $Secondary: #FFC700;
 $Background: #FFF7EE;
+$Button-Shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3), 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
+$Button-Hover: 0px 0px 7px 2px #FFC700, 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
+$Text-Shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 
 body {
   font-family: 'IBM Plex Mono', monospace;
   font-family: 'Poppins', sans-serif;
   color: $Secondary;
   margin: 0;
+
   a {
     text-decoration: none;
     color: $Secondary;
@@ -22,11 +26,14 @@ header {
   justify-content: flex-start;
   
     h1 {
-      font-size: 1.75rem;
       margin: 0;
-      padding: 0.5rem 2rem 0.5rem 2rem;
-      color: $Primary;
+      padding: 0.6rem 2rem 0.6rem 2rem;
       background: $Secondary;
+
+      a {
+        font-size: 1.8rem;
+        color: $Primary;
+      }
     }
 
     nav {
@@ -36,9 +43,35 @@ header {
     .Navi-Button {
       display: flex;
       justify-content: space-around;
+      margin: 0;
+
+      li:active{
+        border-color: $Primary;
+        background: $Secondary;
+        a {
+          color: $Primary;
+        }
+      }
+
+      li:hover {
+        box-shadow: $Button-Hover;
+      }
+
+      li {
+        list-style-type: none;
+        font-size: 1.5rem;
+        padding: 2px 20px 2px 20px;
+        border: 5px solid #FFC700;
+        border-radius: 25px 25px 25px 25px;
+        box-shadow: $Button-Shadow;
+        transition: 0.5s;
+
+        a {
+          text-shadow: $Text-Shadow;
+        }
+      }
     }
  }
-
 
 #background-video {
   position: fixed;
@@ -49,3 +82,29 @@ header {
   z-index: -1;
 }
 
+footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $Primary;
+  min-height: 50px;
+  bottom: 0px;
+  width: 100%;
+
+  a {
+    font-size: 1.1rem;
+    align-self: flex-end;
+    padding: 0px 5px 5px 5px;
+  }
+  .Social-Icons {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 7px 0px 0px 0px;
+
+    li {
+      padding: 0px 3px 0 3px;
+    }
+  }
+}
