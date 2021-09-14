@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Poppins:wght@500;700&display=swap');
+
+$Primary:#22C59E;
+$Secondary: #FFC700;
+$Background: #FFF7EE;
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Poppins', sans-serif;
+  color: $Secondary;
+  margin: 0;
+  a {
+    text-decoration: none;
+    color: $Secondary;
+  }  
+}
+
+header {
+  background: $Primary;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+    h1 {
+      font-size: 1.75rem;
+      margin: 0;
+      padding: 0.5rem 2rem 0.5rem 2rem;
+      color: $Primary;
+      background: $Secondary;
+    }
+
+    nav {
+      flex-grow: 1;
+    }
+
+    .Navi-Button {
+      display: flex;
+      justify-content: space-around;
+    }
+ }
+
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
