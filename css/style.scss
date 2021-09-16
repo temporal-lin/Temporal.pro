@@ -4,7 +4,7 @@ $Primary:#22C59E;
 $Secondary: #FFC700;
 $Background: #FFF7EE;
 $Button-Shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3), 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
-$Button-Hover: 0px 0px 7px 2px #FFC700, 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
+$Button-Hover: 0px 0px 7px 3px #FFC700, 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
 $Text-Shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 
 body {
@@ -24,7 +24,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
+
+    h1:hover a{
+      font-size: 1.85rem;
+      color: $Background;
+      cursor: default;
+    }
+
     h1 {
       margin: 0;
       padding: 0.6rem 2rem 0.6rem 2rem;
@@ -33,6 +39,7 @@ header {
       a {
         font-size: 1.8rem;
         color: $Primary;
+        transition: 0.3s;
       }
     }
 
@@ -64,7 +71,7 @@ header {
         border: 5px solid #FFC700;
         border-radius: 25px 25px 25px 25px;
         box-shadow: $Button-Shadow;
-        transition: 0.5s;
+        transition: 0.5s ease;
 
         a {
           text-shadow: $Text-Shadow;
@@ -82,7 +89,30 @@ header {
   z-index: -1;
 }
 
+footer::before {
+  color: #FFF7EE;
+  opacity: 0.3;
+  font-size: 3rem;
+  position: absolute;
+  content: "24 16 6D BE 66 FE 00";
+  bottom: 5px;
+  left: 5px;
+  z-index: -1;
+}
+
+footer::after {
+  color: #FFF7EE;
+  opacity: 0.3;
+  font-size: 3rem;
+  position: absolute;
+  content: "2B 56 6D 7A CB CE 10";
+  top: 5px;
+  right: 5px;
+  z-index: -1;
+}
+
 footer {
+  overflow: hidden;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -92,16 +122,35 @@ footer {
   bottom: 0px;
   width: 100%;
 
+  a:hover {
+    color: $Background;
+  }
+
   a {
     font-size: 1.1rem;
     align-self: flex-end;
     padding: 0px 5px 5px 5px;
+    transition: 0.3s;
   }
+
   .Social-Icons {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 7px 0px 0px 0px;
+
+    svg:active path {
+      fill: $Secondary;
+    }
+
+    svg:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+
+    svg {
+      transition: 0.3s;
+    }
 
     li {
       padding: 0px 3px 0 3px;

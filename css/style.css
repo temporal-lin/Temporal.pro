@@ -24,6 +24,12 @@ header {
           justify-content: flex-start;
 }
 
+header h1:hover a {
+  font-size: 1.85rem;
+  color: #FFF7EE;
+  cursor: default;
+}
+
 header h1 {
   margin: 0;
   padding: 0.6rem 2rem 0.6rem 2rem;
@@ -33,6 +39,8 @@ header h1 {
 header h1 a {
   font-size: 1.8rem;
   color: #22C59E;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 header nav {
@@ -60,8 +68,8 @@ header .Navi-Button li:active a {
 }
 
 header .Navi-Button li:hover {
-  -webkit-box-shadow: 0px 0px 7px 2px #FFC700, 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
-          box-shadow: 0px 0px 7px 2px #FFC700, 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 0px 0px 7px 3px #FFC700, 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
+          box-shadow: 0px 0px 7px 3px #FFC700, 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
 }
 
 header .Navi-Button li {
@@ -72,8 +80,8 @@ header .Navi-Button li {
   border-radius: 25px 25px 25px 25px;
   -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3), 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
           box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3), 0px 0px 4px rgba(0, 0, 0, 0.3) inset;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 header .Navi-Button li a {
@@ -89,7 +97,30 @@ header .Navi-Button li a {
   z-index: -1;
 }
 
+footer::before {
+  color: #FFF7EE;
+  opacity: 0.3;
+  font-size: 3rem;
+  position: absolute;
+  content: "24 16 6D BE 66 FE 00";
+  bottom: 5px;
+  left: 5px;
+  z-index: -1;
+}
+
+footer::after {
+  color: #FFF7EE;
+  opacity: 0.3;
+  font-size: 3rem;
+  position: absolute;
+  content: "2B 56 6D 7A CB CE 10";
+  top: 5px;
+  right: 5px;
+  z-index: -1;
+}
+
 footer {
+  overflow: hidden;
   position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,11 +137,17 @@ footer {
   width: 100%;
 }
 
+footer a:hover {
+  color: #FFF7EE;
+}
+
 footer a {
   font-size: 1.1rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 0px 5px 5px 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 footer .Social-Icons {
@@ -120,6 +157,22 @@ footer .Social-Icons {
   list-style-type: none;
   margin: 0;
   padding: 7px 0px 0px 0px;
+}
+
+footer .Social-Icons svg:active path {
+  fill: #FFC700;
+}
+
+footer .Social-Icons svg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer .Social-Icons svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 footer .Social-Icons li {
