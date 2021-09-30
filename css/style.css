@@ -39,8 +39,8 @@ header h1 {
 header h1 a {
   font-size: 1.8rem;
   color: #22C59E;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 header nav {
@@ -56,6 +56,7 @@ header .Navi-Button {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 0;
+  padding: 0;
 }
 
 header .Navi-Button li:active {
@@ -86,6 +87,10 @@ header .Navi-Button li {
 
 header .Navi-Button li a {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.Mobile {
+  display: none;
 }
 
 #background-video {
@@ -161,13 +166,13 @@ footer .Social-Icons {
 
 footer .Social-Icons svg:active path {
   fill: #FFC700;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 footer .Social-Icons svg:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 footer .Social-Icons svg {
@@ -177,5 +182,102 @@ footer .Social-Icons svg {
 
 footer .Social-Icons li {
   padding: 0px 3px 0 3px;
+}
+
+@media only screen and (max-width: 820px) {
+  header
+h1 {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  nav {
+    display: none;
+  }
+  .Mobile {
+    display: block;
+  }
+  .Mobile .Navi-Yellow {
+    background-color: #FFC700;
+    min-width: 200px;
+  }
+  .Mobile .Navi-Green {
+    background-color: #22C59E;
+    min-width: 85%;
+  }
+  .Mobile .Navi-White {
+    background-color: #FFF7EE;
+    min-width: 85%;
+  }
+  .Mobile .Navi-Btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .Mobile .Open-Btn {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+  }
+  .Mobile button {
+    opacity: 0.3;
+  }
+  .Mobile ul li {
+    list-style-type: none;
+  }
+  .Mobile .Navi {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+  }
+  .Mobile .visible {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+  }
+  .Mobile .Navi-White .Close-Btn {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+  }
+  .Mobile .Navi-White ul {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.2rem;
+  }
+  .Mobile .Navi-White ul li {
+    padding: 15px 0 15px 0;
+  }
+  .Mobile .Navi-White ul li a {
+    color: #22C59E;
+  }
 }
 /*# sourceMappingURL=style.css.map */
